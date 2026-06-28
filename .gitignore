@@ -1,0 +1,8 @@
+# secrets / tokens / state — NEVER commit
+qbo_tokens.json
+*tokens*.json
+invoices.json
+.env
+*.secret
+node_modules/
+dist/
