@@ -1,0 +1,27 @@
+{
+  "name": "quickbooks-cli",
+  "version": "0.1.0",
+  "description": "A small, zero-dependency QuickBooks Online CLI and library — read time, manage customers/items, create and send invoices. Scriptable and agent-friendly.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Rod Navarro",
+  "repository": { "type": "git", "url": "https://github.com/rodnavarro/quickbooks-cli.git" },
+  "keywords": ["quickbooks", "quickbooks-online", "qbo", "invoice", "accounting", "cli", "intuit"],
+  "bin": { "qbo": "dist/cli.js" },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "qbo": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
